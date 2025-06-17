@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  border: 0;
+  outline: 0;
+  vertical-align: middle;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+.row {
+  width: 100%;
+  margin: auto;
+}
+
+.used-img {
+  width: 50%;
+  height: auto;
+  border: 1px solid red;
+}
+@media screen and (max-width: 580px) {
+  .used-img {
+    width: 100%;
+  }
+}
+.used-img img {
+  width: 100%;
+  height: auto;
+}/*# sourceMappingURL=Used.css.map */
