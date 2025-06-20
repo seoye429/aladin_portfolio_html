@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <!--font awesone-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+<link rel="stylesheet" href="css/BestSeller.css">
+
+    <title>BestSeller</title>
+</head>
+<body>
+
+<header>
+    <div class="navbar custom-navbar-top">
+        <div class="input-group w-25">
+            <input type="text" class="form-control" aria-label="search" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+        <div class="logo"><img src="img/logo.png" alt=""></div>
+        <div class="login d-flex">
+            <div class="log"><a href="#">로그인</a></div>
+            <div class="log ms-3"><a href="#">회원가입</a></div>
+        </div>
+    </div>
+    <nav class="navbar pt-3">          
+        <ul class="lli">
+            <li><a href="#" class="link-nav"><i class="fa-solid fa-bars blu"></i></a></li>
+            <li><a href="#">HOME</a></li>     
+            <li><a href="#">도서</a></li>
+            <li><a href="#">중고</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" 
+                href="#" 
+                role="button" 
+                data-bs-toggle="dropdown"
+                >스토어</a>
+                <ul class="dropdown-menu pe-3">
+                    <div class="d-flex justify-content-between">
+                        <div class="column null">
+                            <h3>국내도서</h3>
+                            <hr>
+                            <a href="#">건강/취미</a>
+                            <a href="#">경제경영</a>
+                            <a href="#">에세이</a>
+                            <a href="#">소설/시/희곡</a>
+                            <a href="#">수험서/자격증</a>
+                            <a href="#">어린이</a>
+                            <a href="#">인문학</a>
+                            <a href="#">초등학교 참고서</a>
+                            <a href="#">고등학교 참고서</a>
+                        </div>
+                        <div class="column">
+                            <h3>해외도서</h3>
+                            <hr>
+                            <a href="#">영미도서</a>
+                            <a href="#">대학교재/전문서</a>
+                            <a href="#">기타 언어권</a>
+                            <a href="#">어린이</a>
+                            <a href="#">일본도서</a>
+                            <a href="#"></a>
+                            <a href="#"></a>
+                        </div>
+                        <div class="column">
+                            <h3>E-Book</h3>
+                            <hr>
+                            <a href="#">경제경영</a>
+                            <a href="#">라이트노벨</a>
+                            <a href="#">로맨스</a>
+                            <a href="#">만화</a>
+                            <a href="#">사회과학</a>
+                            <a href="#">소설/시/희곡</a>
+                            <a href="#">에세이</a>
+                            <a href="#">인문학</a>
+                            <a href="#">자기계발</a>
+                            <a href="#">오디오북</a>
+                        </div>
+                        <div class="column">
+                            <h3>알라딘굿즈</h3>
+                            <hr>
+                            <a href="#">가방/파우치</a>
+                            <a href="#">데스크용품</a>
+                            <a href="#">독서용품</a>
+                            <a href="#">디지털</a>
+                            <a href="#">리빙/키친</a>
+                            <a href="#">문구</a>
+                            <a href="#">생활용품</a>
+                            <a href="#">의류/잡화</a>
+                            <a href="#">북마크</a>
+                        </div>
+                        <div class="column">
+                            <h3>커피</h3>
+                            <hr>
+                            <a href="#">원두</a>
+                            <a href="#">드립백</a>
+                            <a href="#">콜드블루</a>
+                            <a href="#">커피도구</a>
+                            <a href="#">스탬프 이벤트</a>
+                            <a href="#">일산 커피 팩토리</a>
+                        </div>
+                        <div class="column">
+                            <h3>음반</h3>
+                            <hr>
+                            <a href="#">가요</a>
+                            <a href="#">국악</a>
+                            <a href="#">월드뮤직</a>
+                            <a href="#">재즈</a>
+                            <a href="#">종교/명상/기타</a>
+                            <a href="#">클래식</a>
+                            <a href="#">POP</a>
+                            <a href="#">J-POP</a>
+                            <a href="#">LP</a>
+                            <a href="#">OST</a>
+                        </div>
+                        <div class="column">
+                            <h3>블루레이</h3>
+                            <hr>
+                            <a href="#">블루레이</a>
+                            <a href="#">DVD</a>
+                        </div>
+                    </div>
+                </ul>
+            </li>
+        </ul>
+        <ul class="rli">
+            <li><a href="#"><div class="pink">마이페이지</div></a></li>
+            <li><a href="#">장바구니</a></li>
+        </ul>
+    </nav>
+</header>
+<!------------------------------------------------------------------------------------------------------------->
+
+
+
+<div class="container mt-3 mb-2">
+
+<div class="carousel slide" id="cardCarousel" data-bs-ride="carousel" data-bs-interval="3000">
+
+<!--인디케이터-->
+<div class="carousel-indicators">
+    <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="2"></button>
+</div>
+
+
+<!--슬라이드 본채-->
+<div class="carousel-inner">
+
+<!--슬라이드1-->
+<div class="carousel-item active">
+    <div class="row">
+        <div class="col-6 col-md-3  mb-2">
+            <div class="card text-center">
+                <a href="#" target="_blank">
+                    <img src="./img/BestSeller_img/book_1.jpg" class="card-img-top" alt="card1">
+                </a>
+                <div class="card-body">
+                    <h5>나비도감</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3  mb-2">
+            <div class="card text-center">
+                <a href="#" target="_blank">
+                    <img src="./img/BestSeller_img/book_2.jpg" class="card-img-top" alt="card2">
+                </a>
+                <div class="card-body">
+                    <h5>동생</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3  mb-2">
+            <div class="card text-center">
+                <a href="#" target="_blank">
+                    <img src="./img/BestSeller_img/book_3.jpg" class="card-img-top" alt="card3">
+                </a>
+                <div class="card-body">
+                    <h5>죽은 다음</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3  mb-2">
+            <div class="card text-center">
+                <a href="#" target="_blank">
+                    <img src="./img/BestSeller_img/book_4.jpg" class="card-img-top" alt="card4">
+                </a>
+                <div class="card-body">
+                    <h5>식탐해방</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--슬라이드2-->
+<div class="carousel-item">
+    <div class="row">
+        <div class="col-6 col-md-3 mb-2">
+            <div class="card text-center">
+                <a href="#" target="_blank">
+                    <img src="./img/BestSeller_img/book_5.jpg" class="card-img-top" alt="card5">
+                </a>
+                <div class="card-body">
+                    <h5>우아한 거짓말</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3 mb-2 ">
+            <div class="card text-center">
+                <a href="#" target="_blank">
+                    <img src="./img/BestSeller_img/book_6.jpg" class="card-img-top" alt="card6">
+                </a>
+                <div class="card-body">
+                    <h5>비스킷2</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3  mb-2">
+            <div class="card text-center">
+                <a href="#" target="_blank">
+                    <img src="./img/BestSeller_img/book_7.jpg" class="card-img-top" alt="card7">
+                </a>
+                <div class="card-body">
+                    <h5>검지의 힘</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3  mb-2 ">
+            <div class="card text-center">
+                <a href="#" target="_blank">
+                    <img src="./img/BestSeller_img/book_8.jpg" class="card-img-top" alt="card8">
+                </a>
+                <div class="card-body">
+                    <h5>안녕이라 그랬어</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--슬라이드3-->
+<div class="carousel-item">
+    <div class="row">
+        <div class="col-6 col-md-3  mb-2">
+            <div class="card text-center">
+                <a href="#" target="_blank">
+                    <img src="./img/BestSeller_img/book_9.jpg" class="card-img-top" alt="card9">
+                </a>
+                <div class="card-body">
+                    <h5>안주는 화려하게</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3  mb-2">
+            <div class="card text-center">
+                <a href="#" target="_blank">
+                    <img src="./img/BestSeller_img/book_10.jpg" class="card-img-top" alt="card10">
+                </a>
+                <div class="card-body">
+                    <h5>오역하는 말들</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3  mb-2" >
+            <div class="card text-center">
+                <a href="#" target="_blank">
+                    <img src="./img/BestSeller_img/book_11.jpg" class="card-img-top" alt="card11">
+                </a>
+                <div class="card-body">
+                    <h5>첫여름,완주</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3 mb-1  mb-2">
+            <div class="card text-center">
+                <a href="#" target="_blank" id="cols">
+                    <img src="./img/BestSeller_img/book_12.jpg" class="card-img-top" alt="card12">
+                </a>
+                <div class="card-body">
+                    <h5>행복한 청소부</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--화살표-->
+<button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+    <span class="custom-arrow"><i class="fas fa-chevron-left"></i></span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+    <span class="custom-arrow"><i class="fas fa-chevron-right"></i></span>
+</button>
+    </div>
+
+
+<!--베스트셀러-->
+<div class="d-flex justify-content-between align-items-end  p-2" id="bestseller">
+  <div class="text-bottom mb-0">베스트셀러</div>
+  <div class="text-end">
+    <a href="#" target="_blank">
+    more <i class="fas fa-chevron-right"></i>
+    </a>
+  </div>
+</div>
+
+<hr>
+<div class="row" >
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/1.jpg">
+            <p>검지의 힘<br/>
+            검지의 힘 정도만 있다면...</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/2.jpg">
+            <p>광장이휴<br/>
+            12.3내란 사태 이후</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/3.jpg">
+            <p>나비도감<br/>
+            문화동네어린이문학상 수상작</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/4.jpg">
+            <p>행복한 청소부<br/>
+            초등국어교과서수록</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/5.jpg">
+            <p>첫여름,완주<br/>
+            김김희 장편소설</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/6.jpg">
+            <p>죽은 다음<br/>
+            어떻게 끝나고,기억될것인가?</p>
+        </div>
+    </div>
+</div>
+
+
+<!--신간소개-->
+<div class="d-flex justify-content-between align-items-end  p-2" id="bestseller">
+  <div class="text-bottom mb-0">신간소개</div>
+  <div class="text-end">
+    <a href="#" target="_blank">
+    more <i class="fas fa-chevron-right"></i>
+    </a>
+  </div>
+</div>
+
+<hr>
+<div class="row" >
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/7.jpg">
+            <p>워런 베핏 웨이<br/>
+            검지의 힘 정도만 있다면...</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/8.jpg">
+            <p>우아한 거짓말<br/>
+            김려령 장편소설</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/9.jpg">
+            <p>우리는 매일매일<br/>
+            김은영 시집</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/10.jpg">
+            <p>오역하는 말들<br/>
+            같은언어 안에서도 번역이 필요한 순간이 있다.</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/11.jpg">
+            <p>첫여름,완주<br/>
+            김김희 장편소설</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/12.jpg">
+            <p>엄마 도감<br/>
+            아기와 함께 태어나는 사람.</p>
+        </div>
+    </div>
+</div>
+
+
+<!--편집장 선택-->
+<div class="d-flex justify-content-between align-items-end  p-2" id="bestseller">
+  <div class="text-bottom mb-0">편집장 선택</div>
+  <div class="text-end">
+    <a href="#" target="_blank">
+    more <i class="fas fa-chevron-right"></i>
+    </a>
+  </div>
+</div>
+
+<hr>
+<div class="row" >
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/13.jpg">
+            <p>식탐 해방<br/>
+            살찌지 않는 뇌를 만드는 식습관</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/14.jpg">
+            <p>스토너<br/>
+            존 윌리엄스 장편소설</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/15.jpg">
+            <p>빈방의 빛<br/>
+            신인이 말하는 호퍼</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/16.jpg">
+            <p>비스킷2<br/>
+            청소년 독자들의 극찬</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/17.jpg">
+            <p>바움가트너<br/>
+            떠오르는 미국의 별</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/18.jpg">
+            <p>미술관에 간 할미<br/>
+            이렇게 쉽고 재밌는 마술사라니!</p>
+        </div>
+    </div>
+</div>
+
+
+<!--e-book-->
+<div class="d-flex justify-content-between align-items-end  p-2" id="bestseller">
+  <div class="text-bottom mb-0">e-book</div>
+  <div class="text-end">
+    <a href="#" target="_blank">
+    more <i class="fas fa-chevron-right"></i>
+    </a>
+  </div>
+</div>
+
+<hr>
+<div class="row" >
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/19.jpg">
+            <p>문장 강화<br/>
+            문장이란 언어의 기록이다...</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/20.jpg">
+            <p>동생<br/>
+            2023 타이완 금전문학상 수상작</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/21.jpg">
+            <p>안주는 화려하게<br/>
+            화가 노석미 사계절 음식 에세이</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/22.jpg">
+            <p>제자리에 있다는것<br/>
+            프랑스의 철학자,에세이스트,소설가</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/23.jpg">
+            <p>인생의 컨닝 페이퍼<br/>
+            인생컨닝,박종경 변호사</p>
+        </div>
+    </div>
+
+    <div class="col-4 col-lg-2 col-md-4 col-sm-4 mb-2" >
+        <div class="bestseller text-center">
+            <img src="./img/BestSeller_img/24.jpg">
+            <p>슬픔에 이름 붙이기<br/>
+            마음의 혼란을 언어의 질서로 꿰매는 감정사전</p>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+</body>
+</html>
