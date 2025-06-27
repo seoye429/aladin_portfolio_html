@@ -1,18 +1,91 @@
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  font-family: sans-serif;
-  vertical-align: middle;
-  box-sizing: border-box;
+@import url(nav.css);
+@import url(Footer.css);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+    outline: 0;
+    font-size: 100%;
+    font-family: "Noto Sans KR", sans-serif;
+    vertical-align:middle;
+    box-sizing: border-box;
+}
+ol,ul,li{list-style: none;}
+a{color: inherit;text-decoration: none;}
+
+.row{
+    width: 77%;
+    margin: auto;
 }
 
-a {
-  color: inherit;
+
+/* Carousel */
+#demo {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+img {
+    width: 100%;
+    height: 100%;
+    }
+.custom {
+    position: absolute;
+    top: 90%;
+    left: 80%;
+    z-index: 99;
+    text-align: center;
+    width: 15%;
+    height: 5%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0px solid #ccc;
+    border-radius: 15px;
+    font-size: clamp(.4rem, 1.5vw, 1.2rem);
+    }
+/*image*/
+h2{
+    text-align: center;
+    padding: 5%;
+}
+.b-text{
+    width: 100%;
+    height: 100%;
+}
+.b-text>img{
+    border:1px solid rgb(245, 240, 240);
+    width: 100%;
+    height: 70%;
+    
+}
+p{
+    text-align: center;
+    font-size:0.8rem;
+    font-weight: bold;
+    margin-top: 5%;
 }
 
-ol, ul, li {
-  list-style: none;
-}/*# sourceMappingURL=book.css.map */
+.btns{
+    
+    text-align: center;
+    width: 30%;
+    height: auto;
+    margin: auto;
+    background: linear-gradient(to right, #00c6ff, #41a8f4, #00c6ff);
+    border-radius: 15px;
+    margin-bottom: 5%;
+
+    .more-link{
+        color: white;
+        font-size: .8rem;
+        font-weight: bold;
+    }
+}
+.btns:hover{
+    opacity: .8;
+}

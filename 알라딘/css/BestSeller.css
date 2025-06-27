@@ -1,0 +1,135 @@
+@charset "UTF-8";
+@import url(nav.css);
+@import url(Footer.css);
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font-family: "Noto Sans KR", sans-serif;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+.container {
+  width: 64%;
+  height: auto;
+}
+
+/*슬라이드 화살표*/
+.carousel-control-prev,
+.carousel-control-next {
+  width: 35px;
+  height: 35px;
+  background-color: #1677CC;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #3481ec;
+}
+
+.custom-arrow {
+  color: white;
+  font-size: 14px;
+}
+
+/*img*/
+.card-img-top {
+  width: 100%;
+  aspect-ratio: 4/5;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  display: block;
+}
+
+/* 카드 중앙 정렬용 */
+.card.text-center {
+  margin: auto;
+  max-width: 230px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px #b8daf1;
+}
+
+/* 모바일 대응: 이미지 꽉 차게 유지 */
+@media (max-width: 767px) {
+  .card-img-top {
+    height: auto;
+    aspect-ratio: 4/5;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .card.text-center {
+    max-width: 100%;
+  }
+}
+h5 {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/*베스트셀러*/
+#bestseller {
+  height: 60px;
+}
+#bestseller .mb-0 {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+#bestseller .text-end {
+  color: rgb(173, 172, 172);
+  font-size: clamp(0.7rem, 1.5vw, 1rem);
+  padding: 0 3% 1% 3%;
+}
+#bestseller .text-end:hover {
+  border: 1px solid #41A8F4;
+  color: #41A8F4;
+  border-radius: 10px;
+}
+#bestseller i {
+  font-size: clamp(0.5rem, 1vw, 0.7rem);
+}
+
+.bestseller {
+  width: 100%;
+  height: 80%;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #b8daf1;
+}
+.bestseller img {
+  width: 100%;
+  height: 80%;
+  border-radius: 5px;
+  margin-bottom: 2%;
+}
+@media screen and (max-width: 992px) {
+  .bestseller img {
+    height: 75%;
+  }
+}
+.bestseller p {
+  font-size: clamp(0.5rem, 0.8vw, 0.8rem);
+  letter-spacing: -0.5px;
+  font-weight: bold;
+  line-height: 1.3;
+}/*# sourceMappingURL=BestSeller.css.map */
